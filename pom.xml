@@ -47,6 +47,16 @@
           <target>22</target>
         </configuration>
       </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>3.0.0-M7</version>
+          <configuration>
+            <suiteXmlFiles>
+              <suiteXmlFile>src/test/java/suites/alltests.xml</suiteXmlFile> <!-- Path to your TestNG suite file -->
+            </suiteXmlFiles>
+          </configuration>
+        </plugin>
     </plugins>
   </build>
 </project>
