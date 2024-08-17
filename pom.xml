@@ -53,7 +53,7 @@
           <version>3.0.0-M7</version>
           <configuration>
             <suiteXmlFiles>
-              <suiteXmlFile>src/test/java/suites/alltests.xml</suiteXmlFile> <!-- Path to your TestNG suite file -->
+              <suiteXmlFile>src/test/java/suites/homepagetests.xml</suiteXmlFile> <!-- Path to your TestNG suite file -->
             </suiteXmlFiles>
           </configuration>
         </plugin>
