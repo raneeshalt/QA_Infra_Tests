@@ -42,6 +42,11 @@ jobs:
           java-version: '22'
           distribution: 'temurin'
           cache: maven
+      - name: Set up Chrome and Chromedriver
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y chromium-browser
+          sudo apt-get install -y chromium-chromedriver
       - name: test with maven
         run: mvn clean test
 
