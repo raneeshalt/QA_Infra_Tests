@@ -38,7 +38,7 @@ jobs:
         with:
           name: Maven Surefire
           path: target/surefire-reports/testng-results.xml
-          reporter: junit # Use JUnit as the reporter since Surefire generates JUnit XML format reports
+          reporter: junit
       
 
 
