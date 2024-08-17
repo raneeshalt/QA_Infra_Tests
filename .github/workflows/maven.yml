@@ -42,11 +42,10 @@ jobs:
           java-version: '22'
           distribution: 'temurin'
           cache: maven
-      - name: Set up Chrome and Chromedriver
+      - name: Install Google Chrome # Using shell script to install Google Chrome
         run: |
-          sudo apt-get update
-          sudo apt-get install -y chromium-browser
-          sudo apt-get install -y chromium-chromedriver
+          chmod +x ./scripts/InstallChrome.sh
+                      ./scripts/InstallChrome.sh
       - name: test with maven
         run: mvn clean test
 

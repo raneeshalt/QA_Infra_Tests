@@ -21,8 +21,8 @@ public class DriverManager {
         chromeOptions.addArguments("--disable-dev-shm-usage");
         chromeOptions.addArguments("--headless");
 
-        threadLocalDriver.set(new ChromeDriver(chromeOptions));
-//        threadLocalDriver.set(new FirefoxDriver(options));
+//        threadLocalDriver.set(new ChromeDriver(chromeOptions));
+        threadLocalDriver.set(new FirefoxDriver(options));
         return threadLocalDriver.get();
     }
 
