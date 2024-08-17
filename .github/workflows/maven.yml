@@ -37,8 +37,8 @@ jobs:
         uses: dorny/test-reporter@v1
         with:
           name: Maven Surefire
-          path: target/surefire-reports/testng-results.xml
-          reporter: junit
+          path: "**/surefire-reports/TEST-*.xml"
+          reporter: java-junit
       
 
 
