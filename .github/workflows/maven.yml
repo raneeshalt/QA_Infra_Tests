@@ -19,6 +19,13 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    permissions:
+      statuses: write
+      checks: write
+      contents: write
+      pull-requests: write
+      actions: write
+
     steps:
       - uses: actions/checkout@v4
       - name: Set up JDK 22
@@ -34,11 +41,11 @@ jobs:
       - name: test with maven
         run: mvn clean test
       - name: Report test results
-        uses: dorny/test-reporter@v15
+        uses: dorny/test-reporter@v1.9.1
         with:
           name: Maven Surefire
-          path: target/surefire-reports/testng-results.xml
-          reporter: junit # Use JUnit as the reporter since Surefire generates JUnit XML format reports
+          path: "**/surefire-reports/TEST-*.xml"
+          reporter: java-junit
       
 
 
