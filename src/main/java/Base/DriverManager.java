@@ -25,12 +25,12 @@ public class DriverManager {
         chromeOptions.addArguments("--disable-dev-shm-usage");
         chromeOptions.addArguments("--headless");
 
-//        threadLocalDriver.set(new ChromeDriver(chromeOptions));
-        try {
-            threadLocalDriver.set(new RemoteWebDriver(new URL("http://localhost:4444"),chromeOptions));
-        } catch (MalformedURLException e) {
-            throw new RuntimeException(e);
-        }
+        threadLocalDriver.set(new ChromeDriver(chromeOptions));
+        // try {
+        //     threadLocalDriver.set(new RemoteWebDriver(new URL("http://localhost:4444"),chromeOptions));
+        // } catch (MalformedURLException e) {
+        //     throw new RuntimeException(e);
+        // }
         return threadLocalDriver.get();
     }
 
