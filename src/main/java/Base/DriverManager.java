@@ -31,6 +31,7 @@ public class DriverManager {
         // } catch (MalformedURLException e) {
         //     throw new RuntimeException(e);
         // }
+        threadLocalDriver.get().manage().window().maximize();
         return threadLocalDriver.get();
     }
 
